@@ -8,16 +8,16 @@ const Addproduct = () => {
     const form = event.target;
 
     const name = form.name.value;
-    const quantity = form.quantity.value;
-    const supplier = form.supplier.value;
-    const taste = form.taste.value;
-    const category = form.category.value;
-    const details = form.details.value;
+    const brand = form.brand.value;
+    const type = form.type.value;
+    const price = form.price.value;
+    const rating = form.rating.value;
     const photo = form.photo.value;
+    const description = form.description.value;
 
-    const newCoffee = { name, quantity, supplier, taste, category, details, photo }
+    const newProduct = { name, brand, type, price, rating, description, photo }
 
-    console.log(newCoffee);
+    console.log(newProduct);
   }
   return (
     <>
@@ -71,36 +71,40 @@ const Addproduct = () => {
           <div className="md:flex">
             <div className="form-control md:w-1/2 ">
               <label className="label">
-                <span className="label-text">Category</span>
+                <span className="label-text">Rating</span>
               </label>
               <label className="input-group">
                 {/* <span>Name</span> */}
-                <input type="text" name="category" placeholder="Category Name" className="input input-bordered w-full" />
+                <input type="text" name="rating" placeholder="Rating Name" className="input input-bordered w-full" />
               </label>
             </div>
             <div className="form-control md:w-1/2 ml-4">
               <label className="label">
-                <span className="label-text">Details</span>
+                <span className="label-text">Photo</span>
               </label>
               <label className="input-group">
                 {/* <span>Name</span> */}
-                <input type="text" name="details" placeholder="Details" className="input input-bordered w-full" />
+                
+                <input type="text" name="photo" placeholder="Photo" className="input input-bordered w-full" />
               </label>
             </div>
           </div>
 
           <div className="form-control w-full mb-8 ">
             <label className="label">
-              <span className="label-text">Photo </span>
+              <span className="label-text">Short description </span>
             </label>
             <label className="input-group">
-              {/* <span>Name</span> */}
-              <input type="text" name="photo" placeholder="Photo " className="input input-bordered w-full" />
+             {/* <span>Name</span> */}
+               <input type="text" name="description" placeholder="Short description " className="input input-bordered w-full" />
+            
             </label>
           </div>
 
-          <input type="submit" value="Add Coffee" className="btn btn-block" />
+          <input type="submit" value="Add Product" className="btn btn-block" />
         </form>
+
+ 
 
       </div>
     </>
