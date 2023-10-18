@@ -28,20 +28,20 @@ const Addproduct = () => {
           <div className="md:flex">
             <div className="form-control md:w-1/2">
               <label className="label">
-                <span className="label-text">Coffee Name</span>
+                <span className="label-text">Product Name</span>
               </label>
               <label className="input-group">
                 {/* <span>Name</span> */}
-                <input type="text" name="name" placeholder="coffee Name" className="input input-bordered w-full" />
+                <input type="text" name="name" placeholder="Product Name" className="input input-bordered w-full" />
               </label>
             </div>
             <div className="form-control md:w-1/2 ml-4">
               <label className="label">
-                <span className="label-text">Available Quantity</span>
+                <span className="label-text">Brand Name</span>
               </label>
               <label className="input-group">
                 {/* <span>Name</span> */}
-                <input type="text" name="quantity" placeholder="Available Quantity" className="input input-bordered w-full" />
+                <input type="text" name="brand" placeholder="Brand Name" className="input input-bordered w-full" />
               </label>
             </div>
           </div>
@@ -49,20 +49,20 @@ const Addproduct = () => {
           <div className="md:flex">
             <div className="form-control md:w-1/2">
               <label className="label">
-                <span className="label-text">Supplier</span>
+                <span className="label-text">Type</span>
               </label>
               <label className="input-group">
                 {/* <span>Name</span> */}
-                <input type="text" name="supplier" placeholder="Suplier Name" className="input input-bordered w-full" />
+                <input type="text" name="type" placeholder="Type Name" className="input input-bordered w-full" />
               </label>
             </div>
             <div className="form-control md:w-1/2 ml-4">
               <label className="label">
-                <span className="label-text">Taste </span>
+                <span className="label-text">Price </span>
               </label>
               <label className="input-group">
                 {/* <span>Name</span> */}
-                <input type="text" name="taste" placeholder="Taste " className="input input-bordered w-full" />
+                <input type="text" name="price" placeholder="Price" className="input input-bordered w-full" />
               </label>
             </div>
           </div>
