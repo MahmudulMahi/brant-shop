@@ -17,6 +17,7 @@ import PrivateRoute from './providers/PrivateRoute/PrivateRoute';
 import Notfound from './pages/notfount/Notfound';
 import Addproduct from './pages/addproduct/Addproduct';
 import Mycart from './pages/mycart/Mycart';
+import Totalproducts from './components/totalproducts/Totalproducts';
 
 
 
@@ -51,6 +52,11 @@ const router = createBrowserRouter([
       {
         path:'/mycart',
         element:<PrivateRoute><Mycart></Mycart></PrivateRoute>
+      },
+      {
+        path:'/totalproducts',
+        element:<Totalproducts></Totalproducts>,
+        loader:()=>fetch('http://localhost:5000/products')
       },
     ]
   },

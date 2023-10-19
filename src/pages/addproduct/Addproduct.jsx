@@ -1,4 +1,4 @@
-
+import Swal from 'sweetalert2'
 import Navbar from '../../components/Navbar';
 
 const Addproduct = () => {
@@ -18,6 +18,24 @@ const Addproduct = () => {
     const newProduct = { name, brand, type, price, rating, description, photo }
 
     console.log(newProduct);
+
+    fetch('http://localhost:5000/products',{
+    method:'POST',
+    headers:{
+      'content-type':'application/json'
+    },
+    body:JSON.stringify(newProduct)
+    })
+    .then(res=>res.json())
+    .then(data=>{
+      console.log(data)
+      Swal.fire({
+        title: 'Success',
+        text: 'product added successfully',
+        icon: 'Success',
+        confirmButtonText: 'Cool'
+      })
+    })
   }
   return (
     <>
