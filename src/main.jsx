@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import {
   createBrowserRouter,
+
   RouterProvider,
 } from "react-router-dom";
 import Root from './layouts/Root.jsx';
@@ -19,6 +20,12 @@ import Addproduct from './pages/addproduct/Addproduct';
 import Mycart from './pages/mycart/Mycart';
 import Totalproducts from './components/totalproducts/Totalproducts';
 
+import UpdateProduct1 from './components/update1/UpdateProduct1';
+import Shoes from './components/shoes/Shoes';
+
+
+
+
 
 
 const router = createBrowserRouter([
@@ -27,6 +34,7 @@ const router = createBrowserRouter([
     element: <Root></Root>,
     errorElement:<Notfound></Notfound>,
     children:[
+   
       {
         path:'/',
         element:<Home></Home>,
@@ -47,7 +55,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/addproduct',
-        element:<PrivateRoute><Addproduct></Addproduct></PrivateRoute>
+        element:<Addproduct></Addproduct>
       },
       {
         path:'/mycart',
@@ -58,6 +66,16 @@ const router = createBrowserRouter([
         element:<Totalproducts></Totalproducts>,
         loader:()=>fetch('http://localhost:5000/products')
       },
+      {
+        path:'/updateproduct/:id',
+        element:<UpdateProduct1></UpdateProduct1>,
+        loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
+      },
+      {
+        path:'/shoes',
+        element:<Shoes></Shoes>
+      }
+     
     ]
   },
 ]);
